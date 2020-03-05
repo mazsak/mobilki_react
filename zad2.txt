@@ -1,0 +1,11 @@
+baza danych
+-firebase onilne
+-sqllayt offlan
+
+-raport spalania do bazy
+-lista wyswietlanie
+-sortowanie po przez elementy
+-po kliknieciu na elemnet listy raport wyswietlnie
+-rodaj paliwa, marka, spalanie
+-w dwoch wersjach fire i sql
+-link do zdjecia marki czy cus

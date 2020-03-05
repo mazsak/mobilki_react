@@ -10,17 +10,21 @@ export default class Second extends Component {
 
   constructor(props) {
     super(props);
+    this.state.brand = this.props.route.params.fuel.brand;
     this.state.distance = this.props.route.params.fuel.distance;
     this.state.combustion = this.props.route.params.fuel.combustion;
     this.state.expense = this.props.route.params.fuel.expense;
+    this.state.date = this.props.route.params.fuel.date;
     this.calculate();
   }
 
   state = {
+    brand: '',
     distance: 0,
     combustion: 0,
     expense: 0,
-    result: 0
+    result: 0,
+    date: ''
   };
 
   calculate() {
@@ -32,9 +36,11 @@ export default class Second extends Component {
       <View style={{ flex: 1, justifyContent: "center" }}>
         <View style={styles.input}>
           <Text style={styles.texttitle}>Data</Text>
+          <Text style={styles.text}>Brand: {this.state.brand}</Text>
           <Text style={styles.text}>Distance: {this.state.distance} km</Text>
           <Text style={styles.text}>Combustion: {this.state.combustion} l</Text>
           <Text style={styles.text}>Expense: {this.state.expense} zł</Text>
+          <Text style={styles.text}>Date: {this.state.date}</Text>
         </View>
         <View style={styles.input}>
           <Text style={styles.texttitle}>Result</Text>

@@ -6,11 +6,13 @@ import {
     Text,
     TextInput
 } from 'react-native';
-
+import DatePicker from 'react-native-datepicker'
 
 export default class First extends Component {
 
     state = {
+        brand: '',
+        date: '',
         distance: 0,
         combustion: 0,
         expense: 0
@@ -22,6 +24,15 @@ export default class First extends Component {
             <View style={{ flex: 1 }}>
                 <View style={{ flex: 5 }}>
                     <View style={styles.input}>
+                        <Text style={styles.text}>Brand</Text>
+                        <TextInput
+                            value={this.state.brand}
+                            onChangeText={brand => this.setState({ brand })}
+                            underlineColorAndroid='transparent'
+                            placeholder='name'
+                        />
+                    </View>
+                    <View style={styles.input}>
                         <Text style={styles.text}>Distance</Text>
                         <TextInput
                             value={this.state.distance}
@@ -29,7 +40,7 @@ export default class First extends Component {
                             underlineColorAndroid='transparent'
                             placeholder='km'
                             keyboardType={'numeric'}
-                            />
+                        />
                     </View>
                     <View style={styles.input}>
                         <Text style={styles.text}>Combustion</Text>
@@ -39,7 +50,7 @@ export default class First extends Component {
                             underlineColorAndroid='transparent'
                             placeholder='l'
                             keyboardType={'numeric'}
-                            />
+                        />
                     </View>
                     <View style={styles.input}>
                         <Text style={styles.text}>Expense</Text>
@@ -51,9 +62,23 @@ export default class First extends Component {
                             keyboardType={'numeric'}
                         />
                     </View>
+                    <View style={styles.input}>
+                        <Text style={styles.text}>Date</Text>
+                        <DatePicker
+                            date={this.state.date}
+                            mode="date"
+                            placeholder="select date"
+                            format="YYYY-MM-DD"
+                            confirmBtnText="Confirm"
+                            cancelBtnText="Cancel"
+                            onDateChange={(date) => { this.setState({ date: date }) }}
+                        />
+                    </View>
                 </View>
                 <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: 'steelblue' }}>
-                onPress={() => this.props.navigation.navigate('Second', {fuel: this.state})}
+                    <Button
+                        title='Calculate'
+                        onPress={() => this.props.navigation.navigate('Second', { fuel: this.state })} />
                 </View>
             </View>
         );
