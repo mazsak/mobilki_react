@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "Fuel_calculate.app"
-               BlueprintName = "Fuel_calculate"
-               ReferencedContainer = "container:Fuel_calculate.xcodeproj">
+               BuildableName = "Fuel_Calculate.app"
+               BlueprintName = "Fuel_Calculate"
+               ReferencedContainer = "container:Fuel_Calculate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "Fuel_calculateTests.xctest"
-               BlueprintName = "Fuel_calculateTests"
-               ReferencedContainer = "container:Fuel_calculate.xcodeproj">
+               BuildableName = "Fuel_CalculateTests.xctest"
+               BlueprintName = "Fuel_CalculateTests"
+               ReferencedContainer = "container:Fuel_Calculate.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -61,9 +61,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "Fuel_calculateTests.xctest"
-               BlueprintName = "Fuel_calculateTests"
-               ReferencedContainer = "container:Fuel_calculate.xcodeproj">
+               BuildableName = "Fuel_CalculateTests.xctest"
+               BlueprintName = "Fuel_CalculateTests"
+               ReferencedContainer = "container:Fuel_Calculate.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -71,9 +71,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Fuel_calculate.app"
-            BlueprintName = "Fuel_calculate"
-            ReferencedContainer = "container:Fuel_calculate.xcodeproj">
+            BuildableName = "Fuel_Calculate.app"
+            BlueprintName = "Fuel_Calculate"
+            ReferencedContainer = "container:Fuel_Calculate.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Fuel_calculate.app"
-            BlueprintName = "Fuel_calculate"
-            ReferencedContainer = "container:Fuel_calculate.xcodeproj">
+            BuildableName = "Fuel_Calculate.app"
+            BlueprintName = "Fuel_Calculate"
+            ReferencedContainer = "container:Fuel_Calculate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -113,9 +113,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "Fuel_calculate.app"
-            BlueprintName = "Fuel_calculate"
-            ReferencedContainer = "container:Fuel_calculate.xcodeproj">
+            BuildableName = "Fuel_Calculate.app"
+            BlueprintName = "Fuel_Calculate"
+            ReferencedContainer = "container:Fuel_Calculate.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

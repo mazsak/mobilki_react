@@ -1,10 +1,13 @@
 import React from 'react';
+import {
+  Button
+} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import First from './First';
-import Second from './Second';
+import Add from './Add';
+import ShowResultat from './ShowResultat';
 import ListFirebase from './List_firebase';
-import firebase from 'firebase';
+import * as firebase from 'firebase';
 
 
 const firebaseConfig = {
@@ -17,8 +20,10 @@ const firebaseConfig = {
   appId: "1:604250098600:web:0c65e1103e13c579e76b9d",
   measurementId: "G-Z92XDS846X"
 };
-
 firebase.initializeApp(firebaseConfig);
+
+
+export const db = firebase.database().ref('/items');
 
 const Stack = createStackNavigator();
 
@@ -29,16 +34,18 @@ export default function App() {
         <Stack.Screen
           name="List_firebase"
           component={ListFirebase}
-          options={{ title: 'List' }}
+          options={{
+            title: 'List'
+          }}
         />
         <Stack.Screen
           name="First"
-          component={First}
+          component={Add}
           options={{ title: 'Fuel calculator' }}
         />
         <Stack.Screen
           name="Second"
-          component={Second}
+          component={ShowResultat}
           options={{ title: 'Result' }}
         />
       </Stack.Navigator>
