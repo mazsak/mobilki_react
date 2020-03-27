@@ -8,7 +8,11 @@ import {
   Button,
   Image
 } from 'react-native';
-import { db } from './App';
+import firebase from 'firebase';
+import SQLite from "react-native-sqlite-storage";
+
+
+var db = SQLite.openDatabase({ name: 'Items.db'});
 
 
 export default class ShowResultat extends Component {
@@ -64,13 +68,29 @@ export default class ShowResultat extends Component {
         </View>
         {this.props.route.params.show ?
           <View style={styles.input, { margin: 15 }}>
-            <Button title='Save'
+            <Button title='Save firebase'
               onPress={() => {
-                db.push(this.state).then(ToastAndroid.show(
-                  "Add new item",
+                firebase.database().ref('items').push(this.state).then(ToastAndroid.show(
+                  "Add new item to Firebase",
                   ToastAndroid.SHORT
                 ));
-                this.props.navigation.navigate('List_firebase');
+                this.props.navigation.navigate('List');
+              }} />
+            <Button title='Save SQLite'
+              onPress={() => {
+                db.transaction(tx =>
+                  tx.executeSql(
+                    'INSERT INTO raport (brand,link,type,distance,combustion,expense,result,date) VALUES (?,?,?,?,?,?,?,?)',
+                    [this.state.brand, this.state.link, this.state.type, this.state.distance, this.state.combustion, this.state.expense, this.state.result, this.state.date],
+                    (tx, results) => {
+                      if (results.rowsAffected > 0) {
+                        ToastAndroid.show(
+                          "Add new item to SQLite",
+                          ToastAndroid.LONG
+                        );
+                        this.props.navigation.navigate('List');
+                      }
+                    }));
               }} />
           </View>
           : null}

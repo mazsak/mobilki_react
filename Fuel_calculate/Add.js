@@ -16,8 +16,8 @@ export default class Add extends Component {
 
     state = {
         brand: '',
-        link: '',
-        type: '',
+        link: 'https://www.carscare.pl/wp-content/themes/carscare/img/green-car.png',
+        type: 'Petrol',
         date: '',
         distance: 0,
         combustion: 0,

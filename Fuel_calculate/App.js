@@ -1,13 +1,11 @@
 import React from 'react';
-import {
-  Button
-} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import Add from './Add';
 import ShowResultat from './ShowResultat';
-import ListFirebase from './List_firebase';
-import * as firebase from 'firebase';
+import List from './List';
+import firebase from 'firebase';
+
 
 
 const firebaseConfig = {
@@ -23,8 +21,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 
-export const db = firebase.database().ref('/items');
-
 const Stack = createStackNavigator();
 
 export default function App() {
@@ -32,8 +28,8 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator>
         <Stack.Screen
-          name="List_firebase"
-          component={ListFirebase}
+          name="List"
+          component={List}
           options={{
             title: 'List'
           }}
